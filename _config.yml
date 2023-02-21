@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "pt-BR"
@@ -106,8 +106,8 @@ analytics:
 # Site Author
 author:
   name             : "Arthur Costa"
-  avatar           : /assets/img/linktree/arthur_circle.png
-  bio              : "Senior Software engineer e CTO"
+  avatar           : /assets/img/linktree/arthur_circle_low.webp
+  bio              : "Senior software engineer na Pythonic AI e CTO da Elephant Coworking"
   location         : "Fortaleza/CE"
   email            :
   links:

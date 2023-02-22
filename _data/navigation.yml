@@ -1,12 +1,10 @@
 # main links
 main:
-  - title: "Home"
-    url: /
-  - title: "About"
+  - title: "Sobre Mim"
     url: /about/
   - title: "Cursos"
     url: /cursos/
-  - title: "Posts"
+  - title: "Eventos"
     url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/

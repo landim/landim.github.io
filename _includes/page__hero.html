@@ -31,9 +31,12 @@
         {% endif %}
       </h1>
       {% if page.tagline %}
-        <p class="page__lead">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <p class="page__tagline">{{ page.tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% elsif page.header.show_overlay_excerpt != false and page.excerpt %}
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+      {% if page.target_audience_title %}
+        <p class="">{{ page.target_audience_title | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
       {% include page__meta.html %}
       {% if page.header.cta_url %}

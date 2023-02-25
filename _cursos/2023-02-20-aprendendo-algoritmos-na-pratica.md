@@ -1,18 +1,22 @@
 ---
 title: "ALGORITMOS 101"
 tagline: "1a TURMA"
-about: "
+subtitle: "O primeiro passo da jornada de um desenvolvedor começa aqui"
+about:
+  - "
 Algo sobre o curso
 muito bom
-
 "
+  - "outra coisa"
 excerpt: "Curso inicial para quem quer comecar a carreira de programador"
 previous: false
 next: false
 pagination: false
-layout: single
+layout: curso
+cover:
+  image: /assets/img/arthur_cinza.png 
 header:
-  overlay_image: assets/img/arthur_cinza.png
+  overlay_image: assets/img/backs/curso_no_brain.png
 ---
 
 

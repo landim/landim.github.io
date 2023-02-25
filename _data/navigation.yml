@@ -4,7 +4,7 @@ main:
     url: /about/
   - title: "Cursos"
     url: /cursos/
-  - title: "Eventos"
-    url: /collection-archive/
+  # - title: "Eventos"
+  #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/

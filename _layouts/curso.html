@@ -1,95 +1,84 @@
 ---
 layout: default
 ---
-
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
-
-{% assign breadcrumbs_enabled = site.breadcrumbs %}
-{% if page.breadcrumbs != null %}
-  {% assign breadcrumbs_enabled = page.breadcrumbs %}
-{% endif %}
-{% if page.url != "/" and breadcrumbs_enabled %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+{% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
 
 <div id="main" role="main">
-  {% include sidebar.html %}
-
-  <article class="course h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
-    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
-
-    <div class="course__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-          </h1>{% endif %}
-          {% include page__meta.html %}
-        </header>
-      {% endunless %}
-
-      <section class="course__content e-content" itemprop="text">
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </nav>
-          </aside>
-        {% endif %}
-        {{ page.subtitle }}
-        {{ page.about }}
-        {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
-      </section>
-
-      <footer class="course__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="course__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-      </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
-
-    </div>
-
-    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
-  </article>
-
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="course__related">
-      <h2 class="course__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h2>
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
+  <div class="course">
+    <div class="cover"
+      style="{% if overlay_img_path %}background-image: url('{{ overlay_img_path }}');{% endif %}"
+    >
+      <div class="title">
+        {{ page.title }}
+      </div>
+      <div class="undertitle">
+        <div class="tagline">
+          {{ page.tagline }}
+        </div>
+        <div class="subtitle">
+          {{ page.subtitle }}
+        </div>
+        <div class="image">
+          <img src='{{ page.cover.image }}' />
+        </div>
       </div>
     </div>
-  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
-  {% elsif page.id and page.related %}
-    <div class="course__related">
-      <h2 class="course__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h2>
-      <div class="grid__wrapper">
-        {% for post in site.posts limit:4 %}
-          {% if post.id == page.id %}
-            {% continue %}
-          {% endif %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
+    <div class="page">
+      <div class="title">
+        À quem se destina
       </div>
+      <div class="title-sep"></div>
+      <div class="content">
+        <p>Interessados em iniciar a carreira de programador;</p>
+        <p>Estudantes com interesse em ingressar na faculdade de ciências da computação, engenharias ou áreas relacionadas;</p>
+        <p>Curiosos em entender como funciona a lógica por trás dos programas que utilizamos no dia à dia;</p>
+        <p>Interessados em aprender através de exemplos reais do cotidiano de um programador;</p>
+        <p>Pessoas motivadas a se manterem relevantes e competitivas no mercado de trabalho.</p>
+      </div>
+      <div class="content-sep"></div>
+      <div class="obs">
+        <p>
+Saber lógica da programação é essencial para compreender os fundamentos  do funcionamento dos sistemas que todos utilizam em seu trabalho além de permitir a automação de tarefas rotineiras, aumentando produtividade e eficiência nos processos.
+        </p>
+      </div>
+      <div class="content-sep"></div>
     </div>
-  {% endif %}
+    <div class="page">
+      <div class="title">
+        Sobre o Curso
+      </div>
+      <div class="title-sep"></div>
+      <div class="content">
+        <p>Estudaremos algoritmos na prática, solucionando problemas do dia à dia de um programador, assim, aprendendo os conceitos básicos de algoritmo;</p>
+        <p>Criaremos um grupo de estudos no whatsapp para que todos possam progredir juntos;</p>
+        <p>As aulas serão transmitidas ao vivo pelo zoom e ficarão gravadas na plataforma  para que você possa assisti-las durante seis meses;</p>
+        <p>Você poderá praticar os execícios utilizando o seu smartphone mas indicamos o uso do computador.</p>
+      </div>
+      <div class="content-sep"></div>
+      <div class="obs">
+        <p>O curso é 100% online, portanto, pode ser assistido de qualquer parte do mundo, à qualquer hora. Para conferir as aulas e interagir é necessário apenas um computador ou smartphone com acesso à internet.</p>
+      </div>
+      <div class="content-sep"></div>
+    </div>
+    <div class="page">
+      <div class="title">
+        Cronograma
+      </div>
+      <div class="title-sep"></div>
+      <div class="content schedule">
+        <p>Aula 1 - Introdução a algoritmos</p>
+        <p>Aula 2 - Estruturas de controle</p>
+        <p>Aula 3 - Funções</p>
+        <p>Aula 4 - Estruturas de dados básicas</p>
+        <p>Aula 5 - Próximos passos</p>
+        <p>Aula Bônus - Tira dúvidas</p>
+      </div>
+      <div class="content-sep"></div>
+      <div class="obs">
+        <p>O curso é 100% online, portanto, pode ser assistido de qualquer parte do mundo, à qualquer hora. Para conferir as aulas e interagir é necessário apenas um computador ou smartphone com acesso à internet.</p>
+      </div>
+      <div class="content-sep"></div>
+    </div>
+
+  </div>
 </div>

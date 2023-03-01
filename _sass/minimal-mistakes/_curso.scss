@@ -52,13 +52,14 @@ body {
   // }
   // padding-top: 5em;
 
-  .page {
+  .pagina {
     background-image: url('/assets/img/backs/curso_brain.png');
-    background-size: contain;
-    padding-top: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1em 15em;
     display: flex;
     flex-direction: column;
-    height: 100vh;
 
     .title {
       margin-top: 1.3em;
@@ -74,22 +75,19 @@ body {
       border-style: solid;
       border-width: thin;
       width: 50%;
-      margin-bottom: 3em;
       align-self: center;
     }
-    .content-sep {
-      border-color: #ed7f39;
-      border-style: solid;
-      border-width: thin;
+    hr.content-sep {
+      border: 1px solid #ed7f39;
       width: 30%;
-      margin-bottom: 1.5em;
+      // margin-bottom: 1.5em;
       align-self: center;
     }
     .content {
       font-size: 1.1em;
+      margin: 3em 4em;
       p {
         text-align: center;
-        margin: 0 1em;
         margin-bottom: 1em;
         background-color: #323232;
         padding: 0.2em 1em;
@@ -103,12 +101,62 @@ body {
     }
     .obs {
       font-size: 1.0em;
+      margin: 0 8em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
       p {
-        text-align: center;
-        margin: 0 1em;
-        margin-bottom: 1em;
+        margin: 0;
       }
 
+      .horario {
+        font-size: 1.2em;
+        color: #ed7f39;
+        text-shadow: 2px 2px #5f3418;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .subtitle {
+        font-size: 1.1em;
+
+      }
+
+    }
+    .invite {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #ad1610;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-transform: uppercase;
+      margin-top: 5em;
+    }
+    .mail {
+      form {
+        padding: 1em 5em;
+      }
+      .validate {
+        background-color: transparent;
+        .email {
+          background-color: #323232;
+          color: white;
+        }
+        .helper_text {
+          font-size: 0.6em;
+        }
+        .emailbotao {
+          margin-top: 2em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .button {
+            background-color: #a79883;
+            color: black;
+            font-weight: 500;
+          }
+        }
+      }
     }
   }
 
@@ -121,7 +169,7 @@ body {
     align-items: center;
     align-content: center;
     justify-items: center;
-    height: 90vh;
+    padding: 1em 15em;
     
 
     .title {
@@ -129,18 +177,17 @@ body {
       font-weight: 700;
       color: #ad1610;
       text-shadow: 2px 2px #750f0b;
-      height: 25vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-transform: uppercase;
     }
     .undertitle {
-      height: 60vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      margin-top: 5em;
       .tagline {
         font-size: 1.1em;
         font-weight: 700;
@@ -158,10 +205,10 @@ body {
         flex-direction: row;
         justify-content: center;
 
-        img {
-          width: 75%;
-        }
       }
+    }
+    img {
+      width: 30%;
     }
   }
 

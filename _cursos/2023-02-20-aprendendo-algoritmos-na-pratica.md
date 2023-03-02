@@ -15,8 +15,8 @@ pagination: false
 layout: curso
 cover:
   image: /assets/img/arthur_cinza.png 
-header:
-  overlay_image: assets/img/backs/curso_no_brain.png
+<!-- header: -->
+<!--   overlay_image: assets/img/backs/curso_no_brain.png -->
 ---
 
 

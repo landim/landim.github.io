@@ -39,6 +39,8 @@ body {
   flex: 1 0 auto;
 }
 
+
+
 .course {
   // @include breakpoint($large) {
   //   float: right;
@@ -53,13 +55,15 @@ body {
   // padding-top: 5em;
 
   .pagina {
-    background-image: url('/assets/img/backs/curso_brain.png');
-    background-position: center;
+    background-image: url('/assets/img/backs/algorithm_brain.png');
+    background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 1em 15em;
+    background-size: inherit;
+    padding: 1em 1em;
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 
     .title {
       margin-top: 1.3em;
@@ -67,15 +71,17 @@ body {
       font-weight: 700;
       color: #4686d1;
       text-shadow: 2px 2px #2c63a4;
-      text-align: center;
+      // text-align: center;
       text-transform: uppercase;
+      margin-left: 15%;
     }
     .title-sep {
       border-color: #2eb44f;
       border-style: solid;
       border-width: thin;
       width: 50%;
-      align-self: center;
+      // align-self: center;
+      margin-left: 15%;
     }
     hr.content-sep {
       border: 1px solid #ed7f39;
@@ -85,11 +91,11 @@ body {
     }
     .content {
       font-size: 1.1em;
-      margin: 3em 4em;
+      margin: 1em 2em;
       p {
-        text-align: center;
+        text-align: left;
         margin-bottom: 1em;
-        background-color: #323232;
+        background-color: #4c4c47;
         padding: 0.2em 1em;
       }
       margin-bottom: 1em;
@@ -131,15 +137,16 @@ body {
       justify-content: center;
       text-transform: uppercase;
       margin-top: 5em;
+      padding: 1em 10%;
     }
     .mail {
       form {
-        padding: 1em 5em;
+        padding: 1em 15%;
       }
       .validate {
         background-color: transparent;
         .email {
-          background-color: #323232;
+          background-color: #4c4c47;
           color: white;
         }
         .helper_text {
@@ -161,18 +168,23 @@ body {
   }
 
   .cover {
-    background-position: center;
+    background-image: url('/assets/img/backs/algorithm_arthur.png');
+    background-position: 0 0;
+    background-size: inherit;
     background-repeat: no-repeat;
+    width: 100%;
+    // padding-top: percentage(663/1600); /* (img-height / img-width * container-width) */
+                /* (853 / 1280 * 100) */
     display: flex;
     flex-direction: column;
-    background-size: cover;
     align-items: center;
     align-content: center;
     justify-items: center;
-    padding: 1em 15em;
-    
+    height: 90vh;
+    padding: 10% 1em 10% 50%;
 
     .title {
+      // margin-top: percentage((663/16 - 100) / 100);
       font-size: 2.5em;
       font-weight: 700;
       color: #ad1610;

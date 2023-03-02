@@ -4,9 +4,10 @@ layout: default
 {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
 
 <div id="main" role="main">
+  <div id="fullpage">
   <div class="course">
+    <section>
     <div class="cover"
-      style="{% if overlay_img_path %}background-image: url('{{ overlay_img_path }}');{% endif %}"
     >
       <div class="title">
         {{ page.title }}
@@ -19,20 +20,26 @@ layout: default
           {{ page.subtitle }}
         </div>
       </div>
-      <img src='{{ page.cover.image }}' />
+      <!-- <img src='{{ page.cover.image }}' /> -->
     </div>
+    </section>
+    <section>
     <div class="pagina">
       <div class="title">
         À quem se destina
       </div>
       <hr class="title-sep">
       <div class="content">
-        <p>Interessados em iniciar a carreira de programador;</p>
-        <p>Estudantes com interesse em ingressar na faculdade de ciências da computação, engenharias ou áreas relacionadas;</p>
-        <p>Curiosos em entender como funciona a lógica por trás dos programas que utilizamos no dia à dia;</p>
-        <p>Interessados em aprender através de exemplos reais do cotidiano de um programador;</p>
-        <p>Pessoas motivadas a se manterem relevantes e competitivas no mercado de trabalho.</p>
+        <p>• Interessados em iniciar a carreira de programador;</p>
+        <p>• Estudantes com interesse em ingressar na faculdade de ciências da computação, engenharias ou áreas relacionadas;</p>
+        <p>• Curiosos em entender como funciona a lógica por trás dos programas que utilizamos no dia à dia;</p>
+        <p>• Interessados em aprender através de exemplos reais do cotidiano de um programador;</p>
+        <p>• Pessoas motivadas a se manterem relevantes e competitivas no mercado de trabalho.</p>
       </div>
+    </div>
+    </section>
+    <section>
+    <div class="pagina">
       <hr class="content-sep">
       <div class="obs">
         <p>
@@ -41,6 +48,8 @@ Saber lógica da programação é essencial para compreender os fundamentos  do 
       </div>
       <hr class="content-sep">
     </div>
+    </section>
+    <section>
     <div class="pagina">
       <div class="title">
         Sobre o Curso
@@ -52,12 +61,18 @@ Saber lógica da programação é essencial para compreender os fundamentos  do 
         <p>As aulas serão transmitidas ao vivo pelo zoom e ficarão gravadas na plataforma  para que você possa assisti-las durante seis meses;</p>
         <p>Você poderá praticar os execícios utilizando o seu smartphone mas indicamos o uso do computador.</p>
       </div>
+    </div>
+    </section>
+    <section>
+    <div class="pagina">
       <hr class="content-sep">
       <div class="obs">
         <p>O curso é 100% online, portanto, pode ser assistido de qualquer parte do mundo, à qualquer hora. Para conferir as aulas e interagir é necessário apenas um computador ou smartphone com acesso à internet.</p>
       </div>
       <hr class="content-sep">
     </div>
+    </section>
+    <section>
     <div class="pagina">
       <div class="title">
         Cronograma
@@ -79,6 +94,8 @@ Saber lógica da programação é essencial para compreender os fundamentos  do 
         <div class="subtitle">Início em Junho 2023</div>
       </div>
     </div>
+    </section>
+    <section>
     <div class="pagina">
       <div class="invite">Seja o primeiro a saber quando o curso for lançado</div>
       <!-- Begin Mailchimp Signup Form -->
@@ -109,6 +126,8 @@ Saber lógica da programação é essencial para compreender os fundamentos  do 
       <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
       <!--End mc_embed_signup-->
     </div>
+    </section>
 
+  </div>
   </div>
 </div>

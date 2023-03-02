@@ -166,6 +166,9 @@ body {
       }
     }
   }
+  .pagina:nth-child(even) {
+    background-image: url('/assets/img/backs/algorithm.png');
+  }
 
   .cover {
     background-image: url('/assets/img/backs/algorithm_arthur.png');

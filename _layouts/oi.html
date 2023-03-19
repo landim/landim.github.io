@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="home" role="main">
+
+  <div id="cover">
+    <div class="greetings">
+      <div class="left">
+        <div class="hi">
+          <div>
+            {{ site.data.ui-text[site.locale].greetings_1 | default: "Oi, eu sou" }}
+          </div>
+          <div>
+            {{ site.data.ui-text[site.locale].greetings_2 | default: "o Arthur" }}<span class="dot"></span>
+          </div>
+
+        </div>
+        <div class="social">
+          <hr>
+          <a href="">LinkedIn</a>
+          <a href="">Tiktok</a>
+          <a href="">Instagram</a>
+          <a href="">Olby</a>
+        </div>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="/assets/img/photos/arthur_bone.png" />
+    </div>
+  </div>
+
+</div>

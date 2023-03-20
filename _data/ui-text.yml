@@ -50,6 +50,10 @@ en: &DEFAULT_EN
   search_algolia_no_results  : "No results"
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  greetings                  : "Oi, eu sou o Arthur"
+  itsme                      : "eu sou o Arthur"
+  greetings_1                : "Oi, eu sou"
+  greetings_2                : "o Arthur"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -319,6 +323,8 @@ pt-BR:
   search_algolia_no_results  : "Nenhum resultado"
   results_found              : "Resultado(s) encontrado(s)"
   back_to_top                : "Voltar para o topo"
+  greetings                  : "Oi, eu sou o Arthur"
+  itsme                      : "eu sou o Arthur"
 
 # Italian
 # -------

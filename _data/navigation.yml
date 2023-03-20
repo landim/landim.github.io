@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Sobre Mim"
-    url: /about/
-  - title: "Cursos"
-    url: /cursos/
+    url: /#about
+  # - title: "Cursos"
+  #   url: /cursos/
   # - title: "Eventos"
   #   url: /collection-archive/
   # - title: "Sitemap"

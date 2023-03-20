@@ -20,6 +20,7 @@ $course-section-title: #cc241d;
     max-width: $max-width;
   }
   font-family: 'Open Sans', sans-serif;
+  color: white;
 }
 
 #home {
@@ -37,6 +38,7 @@ $course-section-title: #cc241d;
   @include breakpoint($x-large) {
     max-width: $max-width;
   }
+  color: white;
 }
 
 body {
@@ -699,3 +701,67 @@ body {
 
 }
 
+#about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  .photo {
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0em 2em;
+    font-size: 0.8em;
+    line-height: initial;
+    font-size: 0.8em;
+
+    .about_me {
+      font-weight: 600;
+      .about_me_text {
+        text-align: justify;
+        font-size: 0.9em;
+      }
+      .about_me_title {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+    }
+    .quote {
+      font-size: 0.9em;
+      font-style: italic;
+      text-align: center;
+      .author {
+        font-style: normal;
+        color: #4686d1;
+      }
+    }
+  }
+}
+
+#career {
+  .career_about {
+  }
+  .tree {
+    .line {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .exp {
+        .lines {
+          display: flex;
+          flex-direction: row;
+          .verticals {
+            display: flex;
+            flex-direction: column;
+            .vl {
+              border-left: 6px solid green;
+            }
+          }
+          hr {
+          }
+        }
+        .exp-text {
+        }
+      }
+    }
+  }
+}

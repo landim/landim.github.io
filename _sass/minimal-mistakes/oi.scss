@@ -746,17 +746,24 @@ body {
       display: grid;
       grid-template-columns: 50% 50%;
       .exp {
+        display: flex;
+        flex-direction: row;
         .lines {
           display: flex;
           flex-direction: row;
+          align-items: center;
           .verticals {
             display: flex;
             flex-direction: column;
+            height: 100%;
             .vl {
               border-left: 6px solid green;
+              height: 50%;
             }
           }
           hr {
+              border-top: 6px solid blue;
+              width: 2em;
           }
         }
         .exp-text {

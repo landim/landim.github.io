@@ -2,6 +2,8 @@
 main:
   - title: "Sobre Mim"
     url: /#about
+  - title: "Carreira"
+    url: /#career
   # - title: "Cursos"
   #   url: /cursos/
   # - title: "Eventos"

@@ -2,8 +2,6 @@
    SINGLE PAGE/POST
    ========================================================================== */
 
-$course-section-title: #cc241d;
-
 #main {
   @include clearfix;
   margin-left: auto;
@@ -60,12 +58,12 @@ body {
 .page {
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
+    width: 100%;
     padding-right: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
+    width: 100%;
     padding-right: $right-sidebar-width;
   }
 
@@ -657,8 +655,8 @@ body {
 
       .hi {
         color: white;
-        font-size: 2em;
-        font-weight: 900;
+        font-size: 1.8em;
+        font-weight: 700;
 
         .dot {
           height: 15px;
@@ -673,13 +671,14 @@ body {
         display: flex;
         flex-direction: column;
         font-weight: 700;
+        font-size: 0.9em;
 
         hr {
           display: block;
           margin: 1em 0;
           border: 0;
           border-top: 5px solid #de7433;
-          width: 50%;
+          width: 30%;
         }
         a {
           text-decoration: none;
@@ -705,48 +704,52 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   .photo {
+    margin-right: -15%;
   }
   .description {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0em 2em;
-    font-size: 0.8em;
     line-height: initial;
-    font-size: 0.8em;
 
     .about_me {
-      font-weight: 600;
       .about_me_text {
-        text-align: justify;
-        font-size: 0.9em;
+        margin-top: 2em;
+        padding: 0 5%;
+        p {
+          font-weight: 700;
+          text-align: justify;
+          font-size: 0.8em;
+        }
       }
       .about_me_title {
         text-align: center;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.8em;
+        font-weight: 700;
+        font-size: 0.9em;
       }
     }
     .quote {
-      font-size: 0.9em;
-      font-style: italic;
+      font-size: 1em;
       text-align: center;
+      padding: 0 10%;
+      font-family: "Alegreya Sans";
       .author {
         font-style: normal;
-        color: #4686d1;
+        color: #976329;
       }
     }
   }
 }
 
 #career {
-  .career_about {
-  }
+  padding: 1em 2em;
   .tree {
     .line {
       display: grid;
       grid-template-columns: 50% 50%;
       .career_about_title {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 1.2em;
         text-align: center;
       }
@@ -769,9 +772,12 @@ body {
               align-items: flex-end;
               .year {
                 white-space: nowrap;
-                min-width: 58px;
-                max-width: 58px;
+                min-width: 90px;
+                max-width: 90px;
                 text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
               }
               hr {
                   border-top: 6px solid blue;
@@ -807,11 +813,15 @@ body {
           }
         }
         .exp-text {
-          font-weight: 600;
+          font-weight: 800;
           font-size: 0.8em;
           text-align: justify;
+          margin: 0 5px;
         }
       }
     }
   }
+}
+
+#around {
 }

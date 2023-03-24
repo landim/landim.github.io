@@ -10,12 +10,13 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
+  background: #70655e;
 
   &__inner-wrap {
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: 0 1em;
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -51,6 +52,12 @@
   align-self: center;
   font-weight: bold;
   // z-index: 20;
+  flex-direction: column;
+  color: white;
+  svg {
+    margin-bottom: -12px;
+    color: white;
+  }
 }
 
 .site-subtitle {
@@ -64,6 +71,8 @@
   margin-right: 0;
   width: 100%;
   clear: both;
+  color: white;
+  font-weight: 700;
 
   .site-nav {
     margin-left: 0;

@@ -47,16 +47,15 @@
 .site-title {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
   // z-index: 20;
-  flex-direction: column;
   color: white;
   svg {
-    margin-bottom: -12px;
     color: white;
+    position: absolute;
+    padding-top: 20px;
   }
 }
 

@@ -648,7 +648,7 @@ body {
   .greetings {
     display: flex;
     flex-direction: column;
-    padding-top: 5em;
+    padding-top: 7em;
     align-items: end;
 
     .left {
@@ -732,9 +732,10 @@ body {
     .quote {
       font-size: 1em;
       text-align: center;
-      padding: 0 10%;
+      padding: 0 15%;
       font-family: "Alegreya Sans";
       .author {
+        margin-top: 0.5em;
         font-style: normal;
         color: #976329;
       }
@@ -824,4 +825,5 @@ body {
 }
 
 #around {
+  margin-bottom: 2em;
 }

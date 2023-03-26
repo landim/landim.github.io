@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : "engenheiro de software"
 name                     : "Arthur"
 description              : "Oi, eu sou o Arthur"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://www.arthurlandimcosta.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -58,7 +58,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
+  hide                   : true
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -82,6 +82,8 @@ baidu_site_verification  :
 # Social Sharing
 twitter:
   username               :
+tiktok:
+  username               : "@arthurlandimcosta.dev"
 facebook:
   username               :
   app_id                 :
@@ -116,29 +118,32 @@ author:
       url: "mailto:landim.arthur@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
+      url: "https://www.arthurlandimcosta.com"
+    - label: "TikTok"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/landim"
+      url: "https://www.tiktok.com/@arthurlandimcosta.dev"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/arthurlandimcosta.dev"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/landim"
 
 # Site Footer
 footer:
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/landim"
+    - label: "TikTok"
+      icon: "fab fa-fw fa-tiktok"
+      url: "https://www.tiktok.com/@arthurlandimcosta.dev"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/arthurlandimcosta.dev"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/landim"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/landim"
 
 
 # Reading Files

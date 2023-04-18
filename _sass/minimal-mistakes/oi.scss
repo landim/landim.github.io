@@ -723,10 +723,12 @@ body {
 #about {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-bottom: 3em;
 
   @media (max-width: 1200px) {
     grid-template-rows: 50% 50%;
     grid-template-columns: unset;
+    height: 100vh;
   }
   .photo {
     @media (max-width: 1200px) {

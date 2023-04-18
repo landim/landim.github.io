@@ -729,6 +729,7 @@ body {
     grid-template-rows: 50% 50%;
     grid-template-columns: unset;
     height: 100vh;
+    font-size: 1.3em;
   }
   .photo {
     @media (max-width: 1200px) {
@@ -736,7 +737,9 @@ body {
       max-width: 100%;
     }
     img {
-      max-width: inherit;
+      @media (max-width: 1200px) {
+        max-width: inherit;
+      }
     }
   }
   .description {
@@ -746,6 +749,7 @@ body {
     line-height: initial;
     @media (max-width: 1200px) {
       background-color: rgba(5, 5, 5, 0.8);
+      justify-content: unset;
     }
 
     .about_me {
@@ -786,6 +790,7 @@ body {
   margin-right: auto;
 
   .narrow {
+    margin-top: 8em;
     @media (min-width: 1200px) {
       display: none;
     }
